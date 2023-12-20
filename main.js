@@ -18,11 +18,14 @@ window.addEventListener('DOMContentLoaded',()=>{
           
             const fullObjLocal = document.querySelector('#fullObj');
             const objStri = fullObjLocal.value;
-            const b = '"id" : "'+uid+'",' 
-            const output = [objStri.slice(0, 1), b, objStri.slice(1)].join('');
             const t = JSON.parse(objStri);
-            // console.log(t.waitTime)
+            
+              const b = '"id" : "'+uid+'",' 
+              const output = !t.id?[objStri.slice(0, 1), b, objStri.slice(1)].join(''):fullObjLocal.value;
 
+
+            // console.log(t.waitTime)
+            fullObjLocal.value = output;
             if(!btn.classList.contains('active')){
            const time = setTimeout(() => {
             console.log(count++)
