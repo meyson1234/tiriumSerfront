@@ -28,9 +28,9 @@ window.addEventListener('DOMContentLoaded',()=>{
             fullObjLocal.value = output;
             
             let time = setTimeout(() => {
-             if(!btn.classList.contains('active')){
+             if(btn.classList.contains('active')){
             console.log(count++)
-              if(btn.classList.contains('active')) console.log(time);
+              if(!btn.classList.contains('active')) console.log(time);
                 textStatus.innerText = 'Упал'
                 btn.innerText = 'Старт';
                 btn.classList.remove('active');
