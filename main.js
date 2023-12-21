@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             fullObjLocal.value = output;
             
             let time = setTimeout(() => {
-             if(btn.classList.contains('active')){
+             if(document.querySelector('#buttonTimer').classList.contains('active')){
             console.log(count++)
               if(!btn.classList.contains('active')) console.log(time);
                 textStatus.innerText = 'Упал'
