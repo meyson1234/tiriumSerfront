@@ -23,13 +23,13 @@ window.addEventListener('DOMContentLoaded',()=>{
               const b = '"id" : "'+uid+'",' 
               const output = !t.id?[objStri.slice(0, 1), b, objStri.slice(1)].join(''):fullObjLocal.value;
 
-
+              
             // console.log(t.waitTime)
-            fullObjLocal.value = output;
+            fullObjLocal.value = !t.id?[objStri.slice(0, 1), '"id" : "'+uid+'","repeated" : "true",', objStri.slice(1)].join(''):fullObjLocal.value;;
             
             let time = setTimeout(() => {
              if(document.querySelector('#buttonTimer').classList.contains('active')){
-            console.log(count++)
+               console.log(count++)
               if(!btn.classList.contains('active')) console.log(time);
                 textStatus.innerText = 'Упал'
                 btn.innerText = 'Старт';
